@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-size = 13
+font-size = 12
 background-blur-radius = 20
 mouse-hide-while-typing = true
 window-decoration = true
@@ -52,6 +52,7 @@ macos-icon = retro
 font-family = FiraCode
 font-thicken = true
 keybind = shift+enter=text:\x1b\r
-
-
+adjust-cell-width = -1
+adjust-cell-height = -1
 mouse-scroll-multiplier = 0.5
+
