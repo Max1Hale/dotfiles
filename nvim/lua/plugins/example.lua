@@ -125,6 +125,7 @@ return {
     -- add more treesitter parsers
     {
         "nvim-treesitter/nvim-treesitter",
+        highlight = { enable = false }, ---@type lazyvim.TSFeat
         opts = {
             ensure_installed = {
                 "bash",
