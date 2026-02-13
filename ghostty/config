@@ -52,3 +52,6 @@ macos-icon = retro
 font-family = FiraCode
 font-thicken = true
 keybind = shift+enter=text:\x1b\r
+
+
+mouse-scroll-multiplier = 0.5
