@@ -1,9 +1,3 @@
--- Some configuration must be set before Ionide starts
-vim.g["fsharp#fsautocomplete_command"] = {
-    "dotnet",
-    "fsautocomplete",
-}
-
 return {
     -- F# support
     "ionide/Ionide-vim",
