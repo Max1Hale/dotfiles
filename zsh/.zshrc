@@ -46,3 +46,15 @@ source ~/.nvm/nvm.sh
 
 alias ll='ls -lG'
 alias la='ls -la'
+
+export PATH="/Users/maxhale/.duckdb/cli/1.4.4":$PATH
+
+# TMUX
+
+# Create a new detached tmux session with a given tag
+alias tnd='tmux new-session -d -s'
+
+# Create a new attached tmux session with a given tag
+alias tna='tmux new-session -s'
+
+export PATH="$PATH:/Users/maxhale/.dotnet/tools"
