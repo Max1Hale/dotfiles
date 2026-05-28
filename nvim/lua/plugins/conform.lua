@@ -32,6 +32,7 @@ return {
         }
 
         opts.formatters_by_ft = vim.tbl_deep_extend("force", opts.formatters_by_ft, {
+            python = { "autopep8" },
             css = { "prettierd" },
             -- filetype is "fsharp" in Neovim
             fsharp = { "fantomas" },
