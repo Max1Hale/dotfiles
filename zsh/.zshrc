@@ -58,3 +58,18 @@ alias tnd='tmux new-session -d -s'
 alias tna='tmux new-session -s'
 
 export PATH="$PATH:/Users/maxhale/.dotnet/tools"
+
+kp() {
+  if [ -z "$1" ]; then
+    echo "Usage: killport <port>"
+    return 1
+  fi
+  local pid
+  pid=$(lsof -ti tcp:"$1")
+  if [ -z "$pid" ]; then
+    echo "No process found on port $1"
+  else
+    kill -9 $pid
+    echo "Killed process $pid on port $1"
+  fi
+}
