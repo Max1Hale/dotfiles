@@ -64,12 +64,15 @@ kp() {
     echo "Usage: killport <port>"
     return 1
   fi
-  local pid
-  pid=$(lsof -ti tcp:"$1")
-  if [ -z "$pid" ]; then
+  local -a pids
+  pids=("${(f)$(lsof -ti tcp:"$1")}")
+  if [ ${#pids[@]} -eq 0 ]; then
     echo "No process found on port $1"
   else
-    kill -9 $pid
-    echo "Killed process $pid on port $1"
+    kill -9 "${pids[@]}"
+    echo "Killed process(es) ${pids[*]} on port $1"
   fi
 }
+
+# Generate a random API-key-strength secret (32 bytes, base64)
+alias genkey="openssl rand -base64 32 | tr -d '\n='"
